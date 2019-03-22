@@ -15,6 +15,23 @@ class App extends Component {
     this.getCharacters('https://swapi.co/api/people/');
   }
 
+  getSpecies(character){
+    console.log('checking species');
+    fetch(character.species[0])
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        //console.log(data.name);
+        character.speciesPlaintext = data.name;
+        console.log(character.speciesPlaintext);
+      })
+      .catch(err =>{
+        throw new Error(err);
+      })
+
+  }
+
   getCharacters = URL => {
     // feel free to research what this code is doing.
     // At a high level we are calling an API to fetch some starwars data from the open web.
@@ -24,12 +41,7 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
-        console.log(data);
-        // data.results.forEach(x => {
-          //x.speciesPlaintext = fetch(x.species[0]){
-            //
-          //}
-        // })
+        data.results.forEach(character => this.getSpecies(character));
         this.setState({ starwarsChars: data.results });
       })
       .catch(err => {

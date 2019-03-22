@@ -1,8 +1,30 @@
 .App {
   text-align: center;
+  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: yellow;
 }
 .Header {
-  color: #443e3e;
-  text-shadow: 1px 1px 5px #fff;
+  color: yellow;
 }
 /* write your parent styles in here for your App.js */
+
+.card{
+  border: 5px solid yellow;
+  width: 65%;
+  margin: 40px auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+
+h2{
+  width: 100%;
+}
+
+p{
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 3px 3px black;
+  width: 50%;
+  margin-bottom: 20px;
+}

@@ -41,9 +41,10 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
-        data.results.forEach(character => this.getSpecies(character));
-        this.setState({ starwarsChars: data.results });
-        //console.log(data.results);
+        const speciesIncluded = data.results.map(character => this.getSpecies(character));
+        //console.log(speciesIncluded);
+        this.setState({ starwarsChars: speciesIncluded });
+        console.log(this.state.starwarsChars);
       })
       .catch(err => {
         throw new Error(err);

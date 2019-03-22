@@ -24,6 +24,12 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
+        console.log(data);
+        // data.results.forEach(x => {
+          //x.speciesPlaintext = fetch(x.species[0]){
+            //
+          //}
+        // })
         this.setState({ starwarsChars: data.results });
       })
       .catch(err => {

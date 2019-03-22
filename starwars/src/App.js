@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   getSpecies(character){
-    console.log('checking species');
+    //console.log('checking species');
     fetch(character.species[0])
       .then(res => {
         return res.json();
@@ -24,12 +24,12 @@ class App extends Component {
       .then(data => {
         //console.log(data.name);
         character.speciesPlaintext = data.name;
-        console.log(character.speciesPlaintext);
+        //console.log(character.speciesPlaintext);
       })
       .catch(err =>{
         throw new Error(err);
       })
-
+      return character;
   }
 
   getCharacters = URL => {
@@ -43,6 +43,7 @@ class App extends Component {
       .then(data => {
         data.results.forEach(character => this.getSpecies(character));
         this.setState({ starwarsChars: data.results });
+        //console.log(data.results);
       })
       .catch(err => {
         throw new Error(err);

@@ -26,11 +26,19 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+`React JS is a JavaScript framework developed by Facebook to help make large webpages more interactive. One of the biggest concepts behind React to help make this possible is state and setState(), which is used to store data, and re-render the page whenever it is changed. It can do so quickly with the virtual DOM which allows it to only change elements that are affected by any given change in state, rather than the entire page.`
+
 - [ ] What does it mean to _think_ in react?
+
+`Thinking in react is the thought process suggested by the developers of react to best make use of the tools it offers. It starts by identifying potential components that should be created, and then building a basic framework using those components. From there, you can start to add functionality by identifying where you should declare state, what information it needs, and how you need to modify it`
 
 - [ ] Describe state.
 
+`State is a class object in React that holds all the data for a given class. When changes are made to State, any elements that would be affected are re-rendered, allowing for better reactive UI`
+
 - [ ] Describe props.
+
+`Props is an object that holds data from state. It is created when a function that accepts props is invoked, and it is passed as an argument for that function`
 
 ## Project Set Up
 
